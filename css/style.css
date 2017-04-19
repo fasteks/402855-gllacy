@@ -1,2 +1,23 @@
+body {
+	color: #323232;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+}
 
+h2.section-title {
+	color: white;
+	font-family: Roboto;
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 41px;
+}
 
+h3.section-title {
+	color: #323232;
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+}
