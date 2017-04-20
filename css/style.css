@@ -21,3 +21,11 @@ h3.section-title {
 	font-weight: 500;
 	line-height: 28px;
 }
+
+h1.catalog-title {
+	color: white;
+	font-family: Roboto;
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 41px;
+}
