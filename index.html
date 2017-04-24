@@ -6,12 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<header>
+		<header class="centerer">
 			<nav class="main-nav">
 				<a class="header-logo"><img src="img/logo.png" alt="GllacyShop" width="154" height="64"></a>
 				<ul>
-					<li><a href="catalog.html">Каталог</a>
-						<ul>
+					<li><a href="catalog.html" class="btn">Каталог</a>
+						<ul class="catalog-active">
 							<li><a href="#"><b>Новинки</b></a></li>
 							<li><a href="#">Сливочное</a></li>
 							<li><a href="#">Щербеты</a></li>
@@ -19,13 +19,13 @@
 							<li><a href="#">Мелорин</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Доставка и оплата</a></li>
-					<li><a href="#">О компании</a></li>
+					<li><a href="#" class="btn">Доставка и оплата</a></li>
+					<li><a href="#" class="btn">О компании</a></li>
 				</ul>				
 			</nav>
 			<div class="user-block">
 				<div class="search">
-					<div class="">
+					<div class="search-active">
 						<form action="" method="get">
 							<input type="text" name="" value="" placeholder="Что ищем?">
 					</form>
@@ -33,7 +33,7 @@
 				</div>
 				<div class="login">
 					<a class="btn login-btn" href="#">Вход</a>
-					<div class="">
+					<div class="login-active">
 						<form action="" method="">
 							<input type="email" name="" placeholder="Электронная почта">
 							<input type="password" name="" placeholder="Пароль">
@@ -56,20 +56,20 @@
 				</p>
 			</div>
 		</header>	
-		<main>
-			<div class="slider">
-				<label>
-					<input type="radio" name="slider1" checked>
-					Крем-брюле и пломбир с малиновым джемом
-					<a class="btn slider-btn" href="#">Давайте оба!</a>
-				<label>
-					<input type="radio" name="slider1">
-				</label>
-				<label>
-					<input type="radio" name="slider1">
-				</label>
-			</div>
-			<div class="action">
+		<div class="slider">
+			<label>
+				<input type="radio" name="slider1" checked>
+				Крем-брюле и пломбир с малиновым джемом
+				<a class="btn slider-btn" href="#">Давайте оба!</a>
+			<label>
+				<input type="radio" name="slider1">
+			</label>
+			<label>
+				<input type="radio" name="slider1">
+			</label>
+		</div>
+		<main class="centerer">
+			<div class="action clearfix">
 				<section class="action-left">
 					<h2 class="section-title">Малинка даром!</h2>
 					<p>При покупке 2 кг любого фруктового мороженого, добавим 
@@ -88,29 +88,29 @@
 					<b>ХИТ!</b>
 					<img src="img/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
 					<p>310 Р/кг</p>
-					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-					<a class="btn hover" href="#">Быстрый просмотр</a>
+					<a href="#" class="btn">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					<a class="btn btn-hover" href="#">Быстрый просмотр</a>
 				</article>
 				<article>
 					<b>ХИТ!</b>
 					<img src="img/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
 					<p>380 Р/кг</p>
-					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
-					<a class="btn hover" href="#">Быстрый просмотр</a>
+					<a href="#" class="btn">Сливочно-кофейное с кусочками шоколада</a>
+					<a class="btn btn-hover" href="#">Быстрый просмотр</a>
 				</article>
 				<article>
 					<b>ХИТ!</b>
 					<img src="img/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
 					<p>355 Р/кг</p>
-					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-					<a class="btn hover" href="#">Быстрый просмотр</a>
+					<a href="#" class="btn">Сливочно-клубничное с присыпкой из белого шоколада</a>
+					<a class="btn btn-hover" href="#">Быстрый просмотр</a>
 				</article>
 				<article>
 					<b>ХИТ!</b>
 					<img src="img/item-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
 					<p>415 Р/кг</p>
-					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-					<a class="btn hover" href="#">Быстрый просмотр</a>
+					<a href="#" class="btn">Сливочное крем-брюле с карамельной подливкой</a>
+					<a class="btn btn-hover" href="#">Быстрый просмотр</a>
 				</article>
 			</div >
 			<section class="description">
@@ -120,18 +120,20 @@
 					<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 			</section>
-			<div class="">
+			<div class="new">
 				<section class="news">
 					<b>Новое в нашем блоге</b>
-					<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+					<p><a href="#" class="">10 способов сервировки фруктовых щербетов к столу</a>
+					</p>
 				</section>
-				<div class="subsribe">
+				<div class="subscribe clearfix">
 					<form action="" method="">
-						<label><p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+						<label>
+						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
 					 		  что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p> 
 							<input type="email" name="" placeholder="Электронная почта">
 							<button type="submit">Отправить</button>
-						</label>			
+						</label>	
 					</form>
 				</div>
 			</div>
@@ -145,7 +147,7 @@
 				<p>(с 10 до 20 ежедневно)</p>
 				<div class="feedback">
 					<a class="" href="#">Форма обратной связи</a>
-					<div class="">
+					<div class="feedback-form">
 						<form>
 							<b class="section-title">Мы обязательно вам ответим!</b>
 							<input type="text" name="" placeholder="Как вас зовут?">
@@ -157,20 +159,20 @@
 				</div>
 			</section>
 		</div>
-		<footer>
+		<footer class="centerer clearfix">
 			<div class="footer-social">
 				<a class="social-btn" href="#">Твиттер</a>
 				<a class="social-btn" href="#">Инстаграм</a>
             	<a class="social-btn" href="#">Фейсбук</a>
             	<a class="social-btn" href="#">Вконтакте</a>
 			</div>	
-			<div class="footer-menu">
+			<div class="footer-menu-1">
 				<ul>
 					<li><a href="#">Для поставщиков</a></li>
 					<li><a href="#">О производстве</a></li>
 				</ul>
 			</div>
-			<div class="footer-menu">
+			<div class="footer-menu-2">
 				<ul>
 					<li><a href="#">Наши документы</a></li>
 					<li><a href="#">Экологические стандарты</a></li>
