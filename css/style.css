@@ -701,8 +701,96 @@ h1.catalog-title {
 	box-shadow: inset 0 2px 2px #942718;
 }
 
-.feedback-form {
+.feedback-modal {
 	display: none;
+	width: 427px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 18px;
+	padding-bottom: 20px;
+	background-color: #f8f7f4;
+	border-radius: 10px;
+	position: fixed;
+	top: 168px;
+	left: 50%;
+	margin-left: -245px;
+}
+
+.feedback-modal-close {
+	display: block;
+	position: absolute;
+	left: 440px;
+	width: 18px;
+	height: 17px;
+	font-size: 0;
+	background-image: url("../img/feedback-Х.svg");
+	border: 0;
+	cursor: pointer;
+}
+
+.feedback-modal h2 {
+	padding: 0;
+	margin-top: 0;
+	color: #323232;
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+.feedback-form  input[type="text"], .feedback-form input[type="email"], .feedback-form textarea {
+	margin-bottom: 20px;
+	padding: 10px 15px;
+	color: #999;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	border: 1px solid rgba(178, 178, 178, 0.52);
+	border-radius: 5px;
+}
+
+.feedback-form  input[type="text"], .feedback-form input[type="email"] {
+	width: 265px;
+}
+
+
+.feedback-form textarea {
+	width: 398px;
+	resize: none
+}
+
+.feedback-form input:hover, .feedback-form textarea:hover {
+	border: 1px solid rgba(154, 154, 154, 0.52);
+}
+
+.feedback-form input:focus, .feedback-form textarea:focus {
+	border: 1px solid rgba(46, 136, 228, 0.52);
+}
+
+.feedback-modal-submit {
+	float: right;
+	color: #fefefe;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	padding: 11px 24px;
+	background-color: #e84d37;
+	background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	border-radius: 30px;
+	border: 0;
+}
+
+.feedback-modal-submit:hover {
+	background-image: linear-gradient(to top, #ec6e5d 0%, #f58669 100%);
+	box-shadow: 0 2px 2px #ac1000;
+}
+
+.feedback-modal-submit:active {
+	background-image: linear-gradient(to top, #e1613e 0%, #d74531 100%);
+	box-shadow: inset 0 2px 2px #942718;
 }
 
 .main-footer {
@@ -711,7 +799,7 @@ h1.catalog-title {
 	align-items: center;
 	padding-top: 18px;
 }
-
+	
 .footer-social {
 	width: 267px;
 	margin-right: 26px;
