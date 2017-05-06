@@ -1,4 +1,5 @@
 body {
+	margin: 0;
 	color: #323232;
 	font-family: Roboto;
 	font-size: 16px;
@@ -219,6 +220,7 @@ h1.catalog-title {
 }
 
 .login-hover {
+	z-index: 100;
 	display: none;
 	position: absolute;
 	top: 40px;
@@ -239,15 +241,25 @@ h1.catalog-title {
 .login-hover input {
 	width: 241px;
 	height: 44px;
-	background-color: white;
-	border: 1px solid #d3d3d2;
-	border-radius: 5px;
 	margin-bottom: 20px;
+	padding: 0 15px;
 	color: #999;
 	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 24px;
+	background-color: white;
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
+}
+
+.login-hover input:hover {
+	border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+
+.login-hover input:focus {
+	border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
 .login-hover div {
@@ -276,6 +288,7 @@ h1.catalog-title {
 	box-shadow: 0 1px 2px #ac1000;
 	border-radius: 32px;
 	border: 0;
+	cursor: pointer;
 }
 
 .login-red:hover {
@@ -319,7 +332,7 @@ h1.catalog-title {
 	min-height: 242px;
 	display: none;
 	position: absolute;
-	top: 67px;
+	top: 59px;
 	right: 100px;
 	background: url("../img/cart-form.png") no-repeat;
 }
@@ -338,8 +351,118 @@ h1.catalog-title {
 	margin-top: -5px;
 }
 
+.site-wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/slide-1.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
 .slider {
-	margin-top: 5px;
+	z-index: 10;
+	margin-bottom: 39px;
+	position: relative;
+	padding-top: 270px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.slide-title {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 39px;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 60px;
+}
+
+.slide-btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 12px 50px;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+	color: white;
+	font-family: Roboto;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 44px;
+	text-decoration: none;
+	background-color: white;
+	background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	border-radius: 100px;
+}
+
+.slide-btn:hover {
+	background-image: linear-gradient(to top, #ec6e5d 0%, #f58669 100%);
+	box-shadow: 0 2px 2px #ac1000;
+}
+
+.slide-btn:active {
+	background-image: linear-gradient(to top, #e1613e 0%, #d74531 100%);
+	box-shadow: inset 0 2px 2px #942718;
+}
+
+.slider-controls label {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	vertical-align: top;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider-controls {
+	position: absolute;
+	bottom: 25px;
+	left: 27px;
+
+	font-size: 0;
+}
+
+#btn-1:checked ~ .site-wrapper #slide-1,
+#btn-2:checked ~ .site-wrapper #slide-2,
+#btn-3:checked ~ .site-wrapper #slide-3 {
+	display: block;
+}
+
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+	background-color: #ffffff;
+}
+
+#btn-1:hover ~ .site-wrapper label[for="btn-1"],
+#btn-2:hover ~ .site-wrapper label[for="btn-2"],
+#btn-3:hover ~ .site-wrapper label[for="btn-3"] {
+	opacity: 0.4;
+	background-color: #f8f7f4;
+}
+
+#btn-1:checked ~ .site-wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/slide-1.png");
+}
+
+#btn-2:checked ~ .site-wrapper {
+	background-color: #8996a6;
+	background-image: url("../img/slide-2.png");
+}
+
+#btn-3:checked ~ .site-wrapper {
+	background-color: #9d8b84;
+	background-image: url("../img/slide-3.png");
+}
+
+body > input[type="radio"] {
+	display: none;
+}
+
+.slide {
+	display: none;
 }
 
 .action {
@@ -626,6 +749,7 @@ h1.catalog-title {
 	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 	border-radius: 22px;
 	border: 0;
+	cursor: pointer;
 }
 
 .subscribe button:hover {
@@ -702,6 +826,7 @@ h1.catalog-title {
 }
 
 .feedback-modal {
+	z-index: 110;
 	display: none;
 	width: 427px;
 	padding-left: 25px;
@@ -761,11 +886,11 @@ h1.catalog-title {
 }
 
 .feedback-form input:hover, .feedback-form textarea:hover {
-	border: 1px solid rgba(154, 154, 154, 0.52);
+	border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .feedback-form input:focus, .feedback-form textarea:focus {
-	border: 1px solid rgba(46, 136, 228, 0.52);
+	border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
 .feedback-modal-submit {
@@ -781,6 +906,7 @@ h1.catalog-title {
 	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 	border-radius: 30px;
 	border: 0;
+	cursor: pointer;
 }
 
 .feedback-modal-submit:hover {
