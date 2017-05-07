@@ -70,6 +70,10 @@ h1.catalog-title {
 	align-self: center;
 }
 
+.main-menu {
+	position: relative;
+}
+
 .main-menu a {
 	color: white;
 	display: block;
@@ -94,7 +98,14 @@ h1.catalog-title {
 
 .main-menu > li {
 	position: relative;
-	z-index: 90;
+}
+
+.item-after::after {
+	content: "";
+	display: none;
+	position: absolute;
+	width: 88px;
+	height: 7px;
 }
 
 .main-menu .sub-menu {
@@ -109,10 +120,21 @@ h1.catalog-title {
 	background-color: #f8f7f4;
 	border-radius: 5px;
 	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+	z-index: 80;
 }
 
 .main-menu > li:hover .sub-menu {
 	display: block;
+}
+
+.main-menu:hover .item-after::after {
+	display: block;
+}
+
+.main-menu>.item-after:hover .li-hovered {
+	color: #323232;
+	background-color: #f7f6f3;
+	border-radius: 15px;
 }
 
 .sub-menu a {
@@ -139,6 +161,7 @@ h1.catalog-title {
 	display: flex;
 	text-decoration: none;
 	color: white;
+	z-index: 77;
 }
 
 .search {
@@ -153,10 +176,24 @@ h1.catalog-title {
 	border-radius: 32px;
 }
 
+.search-after::after {
+	content: "";
+	top: 21px;
+	left: 1px;
+	display: none;
+	position: absolute;
+	width: 33px;
+	height: 20px;
+}
+
 .search:hover {
 	background: url("../img/search-icon-hover.png") no-repeat;
 	background-position: 50% 50%;
 	background-color: #f8f7f4;
+}
+
+.search:hover.search-after::after {
+	display: block;
 }
 
 .search-hover {
@@ -177,7 +214,7 @@ h1.catalog-title {
 }
 
 .search-hover input {
-	min-width: 341px;
+	min-width: 321px;
 	min-height: 42px;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
@@ -186,6 +223,11 @@ h1.catalog-title {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 24px;
+}
+
+.search-hover input[type="text"] {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .login {
@@ -209,6 +251,24 @@ h1.catalog-title {
 	color: white;
 	text-decoration: none;
 }
+
+.login-after::after {
+	content: "";
+	top: 23px;
+	left: 1px;
+	display: none;
+	position: absolute;
+	width: 95px;
+	height: 17px;
+}
+
+.login-btn:hover.login-after::after {
+	display: block;
+}
+
+.login:hover .login-btn {
+	color: #323232;
+} 
 
 .login:hover {
 	color: #323232;
@@ -304,6 +364,7 @@ h1.catalog-title {
 }
 
 .cart {
+	position: relative;
 	min-width: 117px;
 	min-height: 32px;
 	background: url("../img/empty-cart-icon.png") no-repeat;
@@ -320,6 +381,29 @@ h1.catalog-title {
 	padding-bottom: 5px;
 }
 
+.cart-after::after {
+	content: "";
+	top: 23px;
+	left: 1px;
+	display: none;
+	position: absolute;
+	width: 114px;
+	height: 17px;
+}
+
+.cart-btn:hover.cart-after::after {
+	display: block;
+}
+
+.cart:hover .cart-btn {
+	color: #323232;
+	background-color: #f8f7f4;
+	background-image: url("../img/full-cart-icon.png");
+	background-repeat: no-repeat;
+	border-radius: 32px;
+	background-position: 16px 55%;	
+} 
+
 .cart-btn:hover {
 	color: #323232;
 	background-color: #f8f7f4;
@@ -334,8 +418,8 @@ h1.catalog-title {
 	min-height: 242px;
 	display: none;
 	position: absolute;
-	top: 59px;
-	right: 100px;
+	top: 40px;
+	right: 1px;
 	background: url("../img/cart-form.png") no-repeat;
 }
 
