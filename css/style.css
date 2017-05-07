@@ -137,8 +137,6 @@ h1.catalog-title {
 }
 
 .search {
-	margin-bottom: auto;
-	margin-top: auto;
 	position: relative;
 	padding: 8px;
 	margin-right: 10px;
@@ -189,8 +187,7 @@ h1.catalog-title {
 	position: relative;
 	min-width: 92px;
 	min-height: 32px;
-	margin-top: auto;
-	margin-bottom: auto;
+
 	margin-right: 10px;
 	background: url("../img/login-icon.png") no-repeat; 
 	background-color: rgba(255, 255 , 255, 0.2);
@@ -342,13 +339,27 @@ h1.catalog-title {
 }
 
 .info {
+	margin-top: -20px;
 	color: white;
 	width: 450px;
 	text-align: right;
+	padding: 1px;
 }
 
-.info p {
-	margin-top: -5px;
+.info span {
+	display: block;
+}
+
+.info .time {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.info .date {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 24px;
 }
 
 .site-wrapper {
@@ -468,25 +479,23 @@ body > input[type="radio"] {
 .action {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 10px;
 	margin-bottom: 40px;
 	color: white;
 }
 
-.action-left {
+.action-item {
 	width: 540px;
 	height: 209px;
-	background: url("../img/action-left.jpg");
 	border-radius: 15px;
 	padding: 10px;
 }
 
+.action-left {
+	background: url("../img/action-left.jpg");
+}
+
 .action-right {
-	width: 540px;
-	height: 209px;
 	background: url("../img/action-right.jpg");
-	border-radius: 15px;
-	padding: 10px;
 }
 
 .action-btn {
@@ -557,6 +566,8 @@ body > input[type="radio"] {
 
 .best img {
 	border-radius: 133px;
+	width: 267px;
+	height: 267px;
 }
 
 .article-hover {
@@ -570,6 +581,17 @@ body > input[type="radio"] {
 	margin-bottom: 38px;
 }
 
+/* "ХИТ" картинкой */
+
+.bestseller.article-hover::before {
+	position: absolute;
+	content: "";
+	width: 61px;
+	height: 61px;
+	background: url("../img/hit.png");
+}
+
+/* "ХИТ" на CSS*
 
  .bestseller.article-hover::before {
 	position: absolute;
@@ -580,6 +602,7 @@ body > input[type="radio"] {
 	height: 23px;
 	padding: 18px 12px;
 }
+*/
 
 .article-hover:hover {
 	background: rgba(255,255,255, 0.2);
@@ -589,15 +612,16 @@ body > input[type="radio"] {
 
 .price {
 	position: relative;
-	bottom: 92px;
+	bottom: 110px;
 	left: -45px;
 	text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 	color: white;
 	font-family: Roboto;
 	font-size: 45px;
 	font-weight: 700;
-	line-height: 13px;
-	margin-bottom: -50px;
+	line-height: 45px;
+	margin: 0;
+	margin-bottom: -40px;
 }
 
 .price b {
@@ -767,6 +791,7 @@ body > input[type="radio"] {
 }
 
 .map {
+	position: relative;
 	width: 1200px;
 	height: 429px;
 	background: url("../img/map-with-marker.jpg");
@@ -776,7 +801,7 @@ body > input[type="radio"] {
 }
 
 .contact-info {
-	position: relative;
+	position: absolute;
 	left: 871px;
 	top: 67px;
 	width: 252px;
@@ -803,7 +828,7 @@ body > input[type="radio"] {
 
 .feedback a {
 	display: block;
-	padding: 10px 28px;
+	padding: 10px 27px;
 	margin-top: 24px;
 	font-size: 18px;
 	font-weight: 700;
@@ -1002,7 +1027,7 @@ body > input[type="radio"] {
 	box-shadow: inset 0 2px 1px #888;
 }
 
-.footer-menu-2 ul, .footer-menu-1 ul {
+.footer-info-right ul, .footer-info-left ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -1012,7 +1037,7 @@ body > input[type="radio"] {
 	line-height: 18px;
 }
 
-.footer-menu-1 {
+.footer-info-left {
 	width: 137px;
 	padding-left: 127px;
 	text-align: left;
@@ -1032,7 +1057,7 @@ body > input[type="radio"] {
 	background-image: url("../img/icon-heart.png");
 }
 
-.footer-menu-2 {
+.footer-info-right {
 	width: 293px;
 	margin-right: 26px;
 
