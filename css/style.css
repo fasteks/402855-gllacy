@@ -33,6 +33,7 @@ h1.catalog-title {
 	line-height: 41px;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 26px;
 }
 
 .centerer {
@@ -91,7 +92,7 @@ h1.catalog-title {
 	border-radius: 15px;
 }
 
-.main-menu a:active {
+.main-menu .main-menu-a:active {
 	background-color: #ededed;
 	box-shadow: inset 0 2px 1px dimgrey;
 }
@@ -214,6 +215,7 @@ h1.catalog-title {
 }
 
 .search-hover input {
+	box-sizing: border-box;
 	min-width: 321px;
 	min-height: 42px;
 	border: 1px solid #d3d3d2;
@@ -223,6 +225,10 @@ h1.catalog-title {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 24px;
+}
+
+.search-hover input:hover {
+	border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .search-hover input[type="text"] {
@@ -301,7 +307,8 @@ h1.catalog-title {
 
 
 .login-hover input {
-	width: 241px;
+	box-sizing: border-box;
+	width: 216px;
 	height: 44px;
 	margin-bottom: 20px;
 	padding: 0 15px;
@@ -455,7 +462,7 @@ h1.catalog-title {
 	line-height: 16px;
 }
 
-.info .date {
+.info .tel {
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 24px;
@@ -764,7 +771,6 @@ body > input[type="radio"] {
 	width: 201px;
 	margin: auto;
 	margin-top: 12px;
-	margin-bottom: 20px;
 	text-decoration: none;
 
 }
@@ -873,6 +879,7 @@ body > input[type="radio"] {
 }
 
 .subscribe input {
+	box-sizing: border-box;
 	float: left;
 	width: 345px;
 	height: 44px;
@@ -880,6 +887,10 @@ body > input[type="radio"] {
 	background-color: white;
 	border: 1px solid rgba(178, 178, 178, 0.52);
 	border-radius: 5px;
+}
+
+.subscribe input:hover {
+	border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .subscribe input[type="email"] {
@@ -1015,6 +1026,7 @@ body > input[type="radio"] {
 }
 
 .feedback-form  input[type="text"], .feedback-form input[type="email"], .feedback-form textarea {
+	box-sizing: border-box;
 	margin-bottom: 20px;
 	padding: 10px 15px;
 	color: #999;
@@ -1028,12 +1040,14 @@ body > input[type="radio"] {
 
 .feedback-form  input[type="text"], .feedback-form input[type="email"] {
 	width: 265px;
+	height: 44px;
 }
 
 
 .feedback-form textarea {
 	width: 398px;
-	resize: none
+	height: 155px;
+	resize: none;
 }
 
 .feedback-form input:hover, .feedback-form textarea:hover {
@@ -1230,15 +1244,282 @@ body > input[type="radio"] {
 .catalog-form {
 	width: 879px;
 	margin-bottom: 40px;
+	color: white;
 }
 
-.catalog-form p {
-	display: block;
+.sorting-box {
+	width: 194px;
 }
 
-.catalog-form label {
+.filter-box,
+.btn-filter  {
 	display: inline-block;
-	padding: 9px 16px;
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	margin-right: 14px;
+	margin-bottom: 14px;
+	padding: 0;
+}
+
+.filter-box fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+legend {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 6px;
+  margin-left: 16px;
+}
+
+.sort {
+	width: 194px;
+	height: 36px;
+	padding: 9px 15px;
+	padding-right: 25px;
+	position: relative;
+	z-index: 10;
+	margin: 0;
+	font-family: "Roboto";
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	color: rgba(255, 255, 255, 1);
+	background-color: transparent;
+	border: none;
+	border-radius: 18px;
+	cursor: pointer;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.sort::-ms-expand {
+  display: none
+}
+
+.sort option {
+	color: rgba(50, 50, 50, 1);
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	padding-left: 21px;
+}
+
+.form-btn {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+	position: relative;
+}
+
+.sorting-box .form-btn::before {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	top: 17px;
+	right: 15px;
+	border: 4px solid transparent;  
+	border-top: 4px solid rgba(255, 255, 255, 1);
+}
+
+.form-btn:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.form-btn:hover::before {
+	border-top: 6px solid rgba(50, 50, 50, 1);
+}
+
+.sort:hover {
+	color: rgba(50, 50, 50, 1);
+}
+
+.price-filter  {
+	width: 217px;
+}
+
+.range-controls {
+	position: relative;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+  	border-radius: 18px;
+	padding: 16px 15px;
+	padding-bottom: 0;
+}
+
+.scale {
+	height: 4px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.scale .bar {
+	width: 103px;
+	margin-left: 31px;
+	height: 4px;
+	background-color: #f8f7f4;
+}
+
+.range-toggle {
+	position: absolute;
+	top: 8px;
+	width: 20px;
+	height: 20px;
+	background-color: #f8f7f4;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.range-toggle-min {
+	left: 36px;
+}
+
+.range-toggle-max {
+	left: 139px;
+}
+
+.fat-content-filter fieldset {
+	min-width: 417px;
+}
+
+.fat-content-filter .form-btn {
+	min-height: 16px;
+	padding: 9px 15px;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+}
+
+.fat-content-filter input[type="radio"] + label {
+	margin-right: 10px;
+ 	padding-left: 31px;
+	position: relative; 
+	cursor: pointer;
+}
+
+.fat-content-filter input[type="radio"] + label:last-child {
+	margin-right: 0;
+}
+
+.fat-content-filter input[type="radio"] + label::before {
+	content: "";
+	display: block;
+	width: 19px;
+	height: 19px;
+	top: -1px;
+	left: 1px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	position: absolute;
+	border-radius: 50%;
+}
+
+.fat-content-filter input[type="radio"] + label:hover::before {
+	width: 17px;
+	height: 17px;
+	border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.fat-content-filter input,
+.ice-cream-fillers input {
+	display: none;
+}
+
+.fat-content-filter  input[type="radio"]:checked + label::after {
+	content: "";
+	width: 13px;
+	height: 13px;
+	top: 3px;
+	left: 5px;
+	border-radius: 50%;
+	position: absolute;
+ 	border-radius: 50%;
+	background-color:  rgba(255, 255, 255, 1);
+}
+
+.ice-cream-fillers fieldset {
+	min-width: 703px;
+}
+
+.ice-cream-fillers .form-btn {
+	min-height: 16px;
+	padding: 10px 16px 10px 16px;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+}
+
+.ice-cream-fillers input[type="checkbox"] + label {
+	margin-right: 10px;
+ 	padding-left: 31px;
+	position: relative; 
+	cursor: pointer;
+}
+
+.ice-cream-fillers input[type="checkbox"] + label:last-child {
+	margin-right: 0;
+}
+
+.ice-cream-fillers input[type="checkbox"] + label::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 18px;
+	top: -1px;
+	left: -1px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 3px; 
+}
+
+.ice-cream-fillers input[type="checkbox"]:checked + label::after {
+	content: "";
+	width: 14px;
+	height: 10px;
+	top: 4px;
+	left: 2px;
+	background-image: url(../img/form-check.png);
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.ice-cream-fillers input[type="checkbox"] + label:hover::before {
+	width: 16px;
+	height: 16px;
+	border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.btn-filter {
+	margin-top: 22px;
+	padding: 7px 27px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	border: 2px solid rgba(255, 255, 255, 1);
+	cursor: pointer;
+	font-family: "Roboto";
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	color:  rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+}
+
+.btn-filter:hover {
+	color:  rgba(50, 50, 50, 1);
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.btn-filter:active {
+	padding: 9px 29px;
+	border: none;
+	color:  rgba(50, 50, 50, 1);
+	background-color: #ededed;
+	box-shadow: inset 0 2px 1px dimgrey;
 }
 
 .action-left .section-title {
@@ -1274,6 +1555,13 @@ body > input[type="radio"] {
 	background: rgba(255, 255, 255, 0.2);
 }
 
+.page:active {
+	background-color: white;
+	color: #323232;
+}
+
 .paginator .disabled {
 	opacity: 0.3;
+	position: relative;
+	z-index: -1;
 }
