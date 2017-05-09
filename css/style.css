@@ -180,10 +180,10 @@ h1.catalog-title {
 .search-after::after {
 	content: "";
 	top: 21px;
-	left: 1px;
+	left: -5px;
 	display: none;
 	position: absolute;
-	width: 33px;
+	width: 37px;
 	height: 20px;
 }
 
@@ -202,7 +202,7 @@ h1.catalog-title {
 	min-height: 44px;
 	position: absolute;
 	display: none;
-	left: -342px;
+	left: -339px;
 	top: 41px;
 	padding: 20px 15px;
 	border-radius: 5px;
@@ -231,6 +231,9 @@ h1.catalog-title {
 	border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
+.search-hover input:focus {
+	border: 2px solid rgba(46, 136, 228, 0.52);
+}
 .search-hover input[type="text"] {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -325,7 +328,6 @@ h1.catalog-title {
 .login-hover input:hover {
 	border: 2px solid rgba(154, 154, 154, 0.52);
 }
-
 
 .login-hover input:focus {
 	border: 2px solid rgba(46, 136, 228, 0.52);
@@ -891,6 +893,10 @@ body > input[type="radio"] {
 
 .subscribe input:hover {
 	border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.subscribe input:focus {
+	border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
 .subscribe input[type="email"] {
