@@ -29,17 +29,17 @@
 			<div class="user-block">
 				<div class="search search-after">
 					<div class="search-hover">
-						<form action="" method="get">
-							<input type="text" name="" value="" placeholder="Что ищем?">
+						<form action="#" method="get">
+							<input type="text" placeholder="Что ищем?">
 						</form>
 					</div>
 				</div>
 				<div class="login">
-					<a class="login-btn login-after"" href="#">Вход</a>
+					<a class="login-btn login-after" href="#">Вход</a>
 					<div class="login-hover">
-						<form action="" method="">
-							<input type="email" name="" placeholder="Электронная почта">
-							<input type="password" name="" placeholder="Пароль">
+						<form action="#" method="get">
+							<input type="email" placeholder="Электронная почта">
+							<input type="password" placeholder="Пароль">
 							<button class="btn-red login-red" type="submit">Войти</button>
 							<div>
 								<a href="#">Забыли пароль?</a>
@@ -69,16 +69,16 @@
 					<li><a class="btn">Сливочное</a></li>
 			</ul>
 			<h1 class="catalog-title">Сливочное мороженое</h1>
-			<form class="catalog-form" action="" method="get">
+			<form class="catalog-form" action="#" method="get">
 				<div class="sorting-box filter-box">
 					<fieldset class=""> 
 						<legend>Сортировка:</legend>
 						<div class="form-btn">
 							<select class="sort">
-								<option value="">по популярности</option>
-								<option value="">сначала недорогие</option>
-								<option value="">сначала дорогие</option>
-								<option value="">по жирности</option>
+								<option value="рopular">по популярности</option>
+								<option value="not-expensive">сначала недорогие</option>
+								<option value="expensive">сначала дорогие</option>
+								<option value="fat-content">по жирности</option>
 							</select>
 						</div>
 					</fieldset>
@@ -99,13 +99,13 @@
 					<fieldset>
 						<legend>Жирность:</legend>
 						<div class="form-btn">
-							<input type="radio" name="fats" value="" id="fat-1" checked>
+							<input type="radio" name="fats" value="0%" id="fat-1" checked>
 							<label for="fat-1">0%</label>
-							<input type="radio" name="fats" value="" id="fat-2">
+							<input type="radio" name="fats" value="before 10%" id="fat-2">
 							<label for="fat-2">до 10%</label>
-							<input type="radio" name="fats" value="" id="fat-3">
+							<input type="radio" name="fats" value="before 30%" id="fat-3">
 							<label for="fat-3">до 30%</label>
-							<input type="radio" name="fats" value="" id="fat-4">
+							<input type="radio" name="fats" value="after 30%" id="fat-4">
 							<label for="fat-4">выше 30%</label>
 						</div>
 					</fieldset>
@@ -114,15 +114,15 @@
 					<fieldset class="">
 						<legend>Наполнители:</legend>
 						<div class="form-btn">
-							<input type="checkbox" name="chocolate" value="" id="ice-cream-filler-1"> 
+							<input type="checkbox" name="chocolate" value="chocolate" id="ice-cream-filler-1"> 
 							<label for="ice-cream-filler-1">шоколадные</label>
-							<input type="checkbox" name="sugar" value="" id="ice-cream-filler-2">
+							<input type="checkbox" name="sugar" value="sugar" id="ice-cream-filler-2">
 							<label for="ice-cream-filler-2">сахарные присыпки</label> 
-							<input type="checkbox" name="fruit" value="" id="ice-cream-filler-3"> 
+							<input type="checkbox" name="fruit" value="fruit" id="ice-cream-filler-3"> 
 							<label for="ice-cream-filler-3">фрукты</label>
-							<input type="checkbox" name="syrup" value="" id="ice-cream-filler-4">
+							<input type="checkbox" name="syrup" value="syrup" id="ice-cream-filler-4">
 							<label for="ice-cream-filler-4">сиропы</label> 
-							<input type="checkbox" name="jam" value="" id="ice-cream-filler-5"> 
+							<input type="checkbox" name="jam" value="jam" id="ice-cream-filler-5"> 
 							<label for="ice-cream-filler-5">джемы</label>				
 						</div>
 					</fieldset>
@@ -167,7 +167,7 @@
 						<img src="img/item-5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
 					</a>
 					<p class="price">325 Р<b>/кг</b></p>
-					<a class="btn article-title" class="btn" href="#">Сливочное с брусничным джемом</a>
+					<a class="btn article-title" href="#">Сливочное с брусничным джемом</a>
 					<a class="btn-hover" href="#">Быстрый просмотр</a>
 				</article>
 				<article class="article-hover">
@@ -228,12 +228,12 @@
 				</article>
 			</div>
 			<div class="paginator">
-				<a class="page prev disabled" href="#"><</a>
+				<a class="page prev disabled" href="#">&lt;</a>
 				<a class="page current-page" href="#">1</a>
 				<a class="page" href="#">2</a>
 				<a class="page" href="#">3</a>
 				<a class="page" href="#">4</a>
-				<a class="page next" href="#">></a>
+				<a class="page next" href="#">&gt;</a>
 			</div>
 		</main>	
 
