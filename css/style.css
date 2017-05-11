@@ -1883,6 +1883,7 @@ legend {
 }
 
 .paginator {
+	margin-right: -5px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1899,11 +1900,42 @@ legend {
 	color: white;
 	text-decoration: none;
 	padding: 4px 9px;
+	margin-right: 2.5px;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 18px;
 	border-radius: 15px;
 	background-color: transparent;
+}
+
+.paginator .prev {
+	margin: 0;
+	margin-right: 3px;
+	width: 9px;
+	display: block;
+	content: "";
+	font-size: 0;
+	background-image: url("../img/page-prev.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%
+}
+
+.paginator .next {
+	margin: 0;
+	margin-right: -2px;
+	width: 9px;
+	display: block;
+	content: "";
+	font-size: 0;
+	background-color: transparent;
+	background-image: url("../img/page-next.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%
+}
+
+.paginator .next:hover, .paginator .prev:hover {
+	filter: invert(100%);
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .current-page {
@@ -1912,7 +1944,7 @@ legend {
 }
 
 .page:hover {
-	background: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .page:active {
